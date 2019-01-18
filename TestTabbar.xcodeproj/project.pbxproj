@@ -19,7 +19,7 @@
 		0665149A21EEF1E90039DFE0 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0665149921EEF1E90039DFE0 /* Date+Ext.swift */; };
 		0665149D21EFAB6E0039DFE0 /* CustomProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0665149C21EFAB6E0039DFE0 /* CustomProgressBarView.swift */; };
 		0665149F21F003E00039DFE0 /* WeekDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0665149E21F003E00039DFE0 /* WeekDayView.swift */; };
-		066514A621F00F720039DFE0 /* MyProgramUIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066514A521F00F720039DFE0 /* MyProgramUIConstants.swift */; };
+		066514A621F00F720039DFE0 /* MyProgramVCUIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066514A521F00F720039DFE0 /* MyProgramVCUIConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +37,7 @@
 		0665149921EEF1E90039DFE0 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		0665149C21EFAB6E0039DFE0 /* CustomProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressBarView.swift; sourceTree = "<group>"; };
 		0665149E21F003E00039DFE0 /* WeekDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDayView.swift; sourceTree = "<group>"; };
-		066514A521F00F720039DFE0 /* MyProgramUIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProgramUIConstants.swift; sourceTree = "<group>"; };
+		066514A521F00F720039DFE0 /* MyProgramVCUIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProgramVCUIConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +102,7 @@
 		066514A121F00E3D0039DFE0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				066514A521F00F720039DFE0 /* MyProgramUIConstants.swift */,
+				066514A521F00F720039DFE0 /* MyProgramVCUIConstants.swift */,
 				0665149321EEC27A0039DFE0 /* WeekView.swift */,
 				0665149E21F003E00039DFE0 /* WeekDayView.swift */,
 				0665149721EEE0400039DFE0 /* ExerciseTVCell.swift */,
@@ -213,7 +213,7 @@
 				0665149821EEE0410039DFE0 /* ExerciseTVCell.swift in Sources */,
 				0665149A21EEF1E90039DFE0 /* Date+Ext.swift in Sources */,
 				0665148F21EE8D2E0039DFE0 /* MyProgramVC.swift in Sources */,
-				066514A621F00F720039DFE0 /* MyProgramUIConstants.swift in Sources */,
+				066514A621F00F720039DFE0 /* MyProgramVCUIConstants.swift in Sources */,
 				0665149121EE8D3B0039DFE0 /* SecondVC.swift in Sources */,
 				0665147D21EE86150039DFE0 /* AppDelegate.swift in Sources */,
 				0665149621EECB130039DFE0 /* Constants.swift in Sources */,

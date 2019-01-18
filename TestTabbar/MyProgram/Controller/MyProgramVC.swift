@@ -42,8 +42,6 @@ class MyProgramVC: UIViewController {
         
         addSubviews()
         setupUIComponents()
-        
-        print("screen width: \(screenWidth), screen height: \(screenHeight)")
     }
     
     func addSubviews() {

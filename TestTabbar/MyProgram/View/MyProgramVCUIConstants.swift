@@ -46,7 +46,7 @@ let MY_PROGRAM_TITLE_LABEL_FONT_SIZE: CGFloat = 14.0
 // === subviews of MyProgramVC.view === //
 
 // weekView
-let WEEK_VIEW_BG_COLOR = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
+let WEEK_VIEW_BG_COLOR = UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
 let WEEK_VIEW_CORNER_RADIUS: CGFloat = 0.0
 
 // exerciseTableView
@@ -93,7 +93,7 @@ let DATE_TV_CELL_TEXT_LABEL_COLOR = UIColor.black
 // exerciseImageView
 let EXERCISE_IMAGE_VIEW_IMAGE_NAME = ""
 let EXERCISE_IMAGE_VIEW_BG_COLOR = UIColor.black
-let EXERCISE_IMAGE_VIEW_CORNER_RADIUS: CGFloat = 10.0
+let EXERCISE_IMAGE_VIEW_CORNER_RADIUS: CGFloat = 0.0
 
 // exerciseLabel
 let EXERCISE_LABEL_FONT_NAME = "AvenirNext-Bold"
