@@ -8,7 +8,7 @@ Each view in our app will show a different screen that is managed by a view cont
 other views or UI components and you can add subviews to those subviews, forming a view hierarchy. Having the view hierachy for a view
 controller is important for positioning a component because you can only set its constraints relative to its superview or components
 that are part of the same superview. Some of the common UI components include UIView, UITableView, UITableViewCell, UICollectionView, 
-UICollectionViewCell, UIButton, UILabel, and UIImageview. We will cover how to set some of properties of these components to change
+UICollectionViewCell, UIButton, UILabel, and UIImageview. We will cover how to set some of the properties of these components to change
 how they look as well how to set their constraints which assigns them a position on-screen and dimensions. 
 
 ### Prerequisites
@@ -41,7 +41,7 @@ To change the corner radius of exerciseImageView set `EXERCISE_IMAGE_VIEW_CORNER
 can also assign an image to exerciseImageView by setting `EXERCISE_IMAGE_VIEW_IMAGE_NAME`to an image name that is available in our
 project.
 
-Note: When setting the font of label, you can see the fonts supported by swift by looking at the `Fonts in Swift.pdf` file. Just 
+Note: When choosing the font for a label, you can see the fonts supported by swift by looking at the `Fonts in Swift.pdf` file. Just 
 copy-paste a font name that you like to the appropriate constant.
 
 ## Setting contraints on components
@@ -91,9 +91,9 @@ for i in 0 ... 6 {
 }
 ```
 For all weekDayViews, we set the width and height to constants and algined them vertically with weekView using the centerYAnchor. To 
-have all weekDayViews be evenly spaced horizontally within weekView we need to set centerX anchor of each weekDay view to be a multiple
-of the centerX of weekView. That is, the centerX of the first weekDayView will be 1/7 of the horizontal distance of the centerX of 
-weekView, the second will be 3/7, and so on as shown below. We are using multiples of 1/7 because there are 7 weekDayViews inside of 
+have all weekDayViews be evenly spaced horizontally within weekView we need to set the centerX anchor of each weekDay view to be a 
+multiple of the centerX of weekView. That is, the centerX of the first weekDayView will be 1/7 of the horizontal distance of the centerX 
+of weekView, the second will be 3/7, and so on as shown below. We are using multiples of 1/7 because there are 7 weekDayViews inside of 
 weekView.
 
 ```
