@@ -41,4 +41,5 @@ To change the corner radius of exerciseImageView `EXERCISE_IMAGE_VIEW_CORNER_RAD
 also assign an image to exerciseImageView by setting `EXERCISE_IMAGE_VIEW_IMAGE_NAME`to an image name that is available in the Assets 
 folder.
 
-
+Note: When setting the font of label, you can see the fonts support by swift by looking at the `Fonts in Swift.pdf` file. Just copy-pasta
+a font name that you like to the appropriate constant.
