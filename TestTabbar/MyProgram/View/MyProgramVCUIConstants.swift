@@ -19,18 +19,18 @@ MyProgramVC
         |
         |--- weekView
             |
-            |--- weekDayView
+            |--- weekDayView (x7)
                 |
                 |--- weekDayLabel
                 |--- dayOfTheMonthLabel
         |
         |--- exerciseTableView
             |
-            |--- dateTVCell
+            |--- dateTVCell (x2)
                 |
                 |--- textLabel
             |
-            |--- exerciseTVCell
+            |--- exerciseTVCell (x4)
                 |
                 |--- exerciseImageView
                 |--- exerciseLabel
@@ -92,6 +92,7 @@ let DATE_TV_CELL_TEXT_LABEL_COLOR = UIColor.black
 
 // exerciseImageView
 let EXERCISE_IMAGE_VIEW_IMAGE_NAME = ""
+let EXERCISE_IMAGE_VIEW_CONTENT_MODE = UIView.ContentMode.scaleToFill
 let EXERCISE_IMAGE_VIEW_BG_COLOR = UIColor.black
 let EXERCISE_IMAGE_VIEW_CORNER_RADIUS: CGFloat = 0.0
 

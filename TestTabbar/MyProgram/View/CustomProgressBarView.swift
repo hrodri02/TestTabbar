@@ -75,16 +75,17 @@ class CustomProgressBarView: UIView {
     func createPaths()
     {
         let progressBarWidth = (screenWidth - 20) * 0.5;
+        let progressBarHeight = (screenHeight / 5.0 - 5) * 0.3;
         var x: CGFloat = 5.0
         
         while x < progressBarWidth {
             stripes.move(to: CGPoint(x: x + 5, y: 0.0))
-            stripes.addLine(to: CGPoint(x: x, y: 40.0))
+            stripes.addLine(to: CGPoint(x: x, y: progressBarHeight))
             x += 10.0
         }
         
-        progressPath.move(to: CGPoint(x: 0, y: 20.0))
-        progressPath.addLine(to: CGPoint(x: stripes.bounds.width + 10, y: 20.0))
+        progressPath.move(to: CGPoint(x: 0, y: progressBarHeight / 2.0))
+        progressPath.addLine(to: CGPoint(x: stripes.bounds.width + 10, y: progressBarHeight / 2.0))
     }
     
     private func setupStaticProgressBar() {

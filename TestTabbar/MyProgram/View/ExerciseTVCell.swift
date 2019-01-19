@@ -16,6 +16,7 @@ class ExerciseTVCell: UITableViewCell
         imageView.backgroundColor = EXERCISE_IMAGE_VIEW_BG_COLOR
         imageView.layer.cornerRadius = EXERCISE_IMAGE_VIEW_CORNER_RADIUS
         imageView.image = UIImage(named: EXERCISE_IMAGE_VIEW_IMAGE_NAME)
+        imageView.contentMode = EXERCISE_IMAGE_VIEW_CONTENT_MODE
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
