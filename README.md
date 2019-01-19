@@ -1,17 +1,17 @@
-# TestTabbar
+# Workflow
 
 This document describes the workflow to update the properties of UI components and set their constraints.
 
-## Getting Started
+## Background
 
 Each view in our app will show a different screen that is managed by a view controller. A view controller has a view that can contain
-other views or UI components and you can add subviews to those subviews, forming a view hierarchy. Having the view hierachy for a view
+other views or UI components and you can add subviews to those subviews, forming a view hierarchy. Having the view hierachy of a view
 controller is important for positioning a component because you can only set its constraints relative to its superview or components
 that are part of the same superview. Some of the common UI components include UIView, UITableView, UITableViewCell, UICollectionView, 
 UICollectionViewCell, UIButton, UILabel, and UIImageview. We will cover how to set some of the properties of these components to change
 how they look as well how to set their constraints which assigns them a position on-screen and dimensions. 
 
-### Prerequisites
+### Naming conventions
 
 To set the properties of UI components we will be providing a file for every view controller with the naming convention below so that 
 they can be easily found in Xcode.
@@ -30,25 +30,31 @@ have subviews whose constraints are set in `WeekView.swift` and `ExerciseTableVi
 
 On Xcode, build and run the project with `command + R`, so that you can see how the app looks on the simulator. Notice that
 the background color of the weekView is red, the corners of exerciseImageView are not rounded, and exerciseImageView does not contain an 
-image. We are going to change these properties in the `MyProgramVCUIConstants.swift` file. 
+image. Navigate to `MyProgramVCUIConstants.swift` file on Xcode to change these properties.
 
 To change the background color from red to black change the value of `WEEK_VIEW_BG_COLOR` from 
 `UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)` to `UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)`. The parameters red, 
-green, blue, and alpha can be assigned a value between 0.0 and 1.0. The alpha parameter is the opacity of the color with 0.0 being 
+green, blue, and alpha can be assigned a value between 0.0 and 1.0. The alpha parameter is the opacity of the color, 0.0 being 
 completely transparent and 1.0 being opaque. Build and run the project again to see the changes in the simulator.
 
 To change the corner radius of exerciseImageView set `EXERCISE_IMAGE_VIEW_CORNER_RADIUS` to the desired value (I normaly use a 10.0). You
 can also assign an image to exerciseImageView by setting `EXERCISE_IMAGE_VIEW_IMAGE_NAME`to an image name that is available in our
-project.
+project. To add a .png image to the project simply drag it to the `Assets.xcassets` folder on Xcode. I have already added one called
+"messi", so you can use that one or add your own. The property that affects how the image is presented is content mode and it can be
+1 of 13 values, but the ones used most often are: `UIView.ContentMode.scaleToFill`, `UIView.ContentMode.scaleAspectFit`, and 
+`UIView.ContentMode.scaleAspectFill`. Currently, `EXERCISE_IMAGE_VIEW_CONTENT_MODE` is set to scale to fill, but try the others to see
+how the presentation of the image changes.
 
-Note: When choosing the font for a label, you can see the fonts supported by swift by looking at the `Fonts in Swift.pdf` file. Just 
-copy-paste a font name that you like to the appropriate constant.
+When choosing a font for a label, you can see the fonts supported by Swift by looking at the `Fonts in Swift.pdf` file. Just 
+copy-paste a font name that you like to the appropriate font name constant.
 
 ## Setting contraints on components
 
 Setting constraints on components programmatically is straightforward in Swift. For example, notice from the view hierarchy that the view
 of MyProgramVC contains two subviews: weekView and exerciseTableView. The code below shows how their constraints are set which is located
 in `MyProgramVC.swift`.
+
+### Ex 1
 
 constraints for weekView:
 ```
@@ -77,6 +83,8 @@ exerciseTableView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide
 The only constraint that is interesting in this case is the first one. The top of the exerciseTableView is set to the bottom of the
 weekView.
 
+### Ex 2
+
 There are other anchors that we can use. To demonstrate, observe the contraints for the 7 weekDayViews inside of weekView.
 
 ```
@@ -90,8 +98,9 @@ for i in 0 ... 6 {
     multiplier: m, constant: 0).isActive = true
 }
 ```
-For all weekDayViews, we set the width and height to constants and algined them vertically with weekView using the centerYAnchor. To 
-have all weekDayViews be evenly spaced horizontally within weekView we need to set the centerX anchor of each weekDay view to be a 
+
+For all weekDayViews, we set the width and height to constants and algin them vertically with weekView using the centerYAnchor. To 
+have all weekDayViews be evenly spaced horizontally within weekView we need to set the centerX anchor of each weekDayView to be a 
 multiple of the centerX of weekView. That is, the centerX of the first weekDayView will be 1/7 of the horizontal distance of the centerX 
 of weekView, the second will be 3/7, and so on as shown below. We are using multiples of 1/7 because there are 7 weekDayViews inside of 
 weekView.
